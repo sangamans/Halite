@@ -1,12 +1,24 @@
 from kaggle_environments import make
 from kaggle_environments.envs.halite.helpers import *
+from random import choice
 
-# Create a test environment for use later
-board_size = 5
-environment = make("halite", configuration={"size": board_size, "startingHalite": 1000})
-agent_count = 2
-environment.reset(agent_count)
-state = environment.state[0]
+# Create environment
+env = make("halite", configuration={ "episodeSteps": 400 }, debug=True)
+print(env.configuration)
 
-board = Board(state.observation, environment.configuration)
-print(board)
+# creating the agent
+def agent(obs,config):
+    
+    board = Board(obs,config)
+    me = board.current_player
+    
+    # Set actions for each ship
+    for ship in me.ships:
+        ship.next_action = choice([ShipAction.NORTH,ShipAction.EAST,ShipAction.SOUTH,ShipAction.WEST,None])
+    
+    # Set actions for each shipyard
+    for shipyard in me.shipyards:
+        shipyard.next_action = None
+    
+    return me.next_actions
+
