@@ -26,4 +26,4 @@ def random_agent(obs,config):
 
 env.reset(agent_count)
 env.run([random_agent, "random", "random", "random"])
-env.render(mode="ipython", width=500, height=450)
+print(env.render(mode="ipython", width=500, height=450))
