@@ -1,6 +1,13 @@
 from kaggle_environments import make
 from kaggle_environments.envs.halite.helpers import *
 from random import choice
+import json
+
+# Writing to json
+def writetojson(filename, data):
+    filename = filename + ".json"
+    with open(filename, 'w') as fp:
+        json.dump(data, fp)
 
 # Create environment
 env = make("halite", configuration={ "episodeSteps": 400 }, debug=True)
@@ -26,4 +33,6 @@ def random_agent(obs,config):
 
 env.reset(agent_count)
 env.run([random_agent, "random", "random", "random"])
-print(env.render(mode="ipython", width=500, height=450))
+observation = env.render(mode="json")
+print(observation)
+#writetojson("test", observation)
