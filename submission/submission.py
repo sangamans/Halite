@@ -3,7 +3,7 @@ from kaggle_environments.envs.halite.helpers import *
 from random import choice
 import json
 
-# Writing to json
+# Writing to json to see how the data gets outputted
 def writetojson(filename, data):
     filename = filename + ".json"
     with open(filename, 'w') as fp:
@@ -34,5 +34,5 @@ def random_agent(obs,config):
 env.reset(agent_count)
 env.run([random_agent, "random", "random", "random"])
 observation = env.render(mode="json")
-print(observation)
-#writetojson("test", observation)
+data = json.loads(observation)
+writetojson("test", data)
