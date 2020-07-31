@@ -32,7 +32,9 @@ def random_agent(obs,config):
 
 
 env.reset(agent_count)
-env.run([random_agent, "random", "random", "random"])
-observation = env.render(mode="json")
-data = json.loads(observation)
-writetojson("test", data)
+#env.run([random_agent, "random", "random", "random"])
+#observation = env.render(mode="json")
+#data = json.loads(observation)
+#writetojson("test", data)
+random_action = choice([ShipAction.NORTH,ShipAction.EAST,ShipAction.SOUTH,ShipAction.WEST,ShipAction.CONVERT,None]
+print(env.step([ShipAction.NORTH, random_action, random_action, random_action]))
