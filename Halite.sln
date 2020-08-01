@@ -7,6 +7,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "submission", "submission\su
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "game", "game\game.pyproj", "{D326A80F-515E-41D3-823D-1BD5F6EEB7FA}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "agents", "agents\agents.pyproj", "{53D792EF-5BC7-474D-8205-3A2927A4DB4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,8 @@ Global
 		{AE668835-BB38-49A4-943D-534A42059A99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D326A80F-515E-41D3-823D-1BD5F6EEB7FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D326A80F-515E-41D3-823D-1BD5F6EEB7FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53D792EF-5BC7-474D-8205-3A2927A4DB4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53D792EF-5BC7-474D-8205-3A2927A4DB4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

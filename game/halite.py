@@ -19,6 +19,6 @@ class Halite(Game):
 
     # execute one step of the game conditioned by given action to return reward at each step
     def step(self, action):
-        self.env.reset(self.agent_count)
-        #observation = 
-        #self.obervations += 
+        out_data = env.step([action, random_action, random_action, random_action])
+        self.obervations += [out_data]
+        #observation = out_data['']
